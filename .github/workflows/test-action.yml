@@ -12,25 +12,12 @@ on:
       - '**.md'
 
 jobs:
-  test-issue-linux:
-    runs-on: ubuntu-latest
+  test-issue:
+    runs-on: ${{ matrix.os }}
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-      - run: |
-          cd ui/glypheditor
-          npm ci
-          npm run build --if-present
-        #npm run test --if-present
-  
-  test-issue-windows:
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
 
     steps:
       - name: Checkout repo
