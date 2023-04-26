@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
-          cache-dependency-path: '${{github.repository}}/ui/glypheditor/package-lock.json'
+          cache-dependency-path: '**/package-lock.json'
       - run: |
           cd /ui/glypheditor/
           npm ci
