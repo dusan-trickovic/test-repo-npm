@@ -1,29 +1,29 @@
-# name: 'Testing the issue'
+name: 'Testing the issue'
 
-# on: 
-#   pull_request:
-#     paths-ignore:
-#       - '**.md'
+on: 
+  pull_request:
+    paths-ignore:
+      - '**.md'
   
-#   push:
-#     branches:
-#       - main
-#     paths-ignore:
-#       - '**.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
 
-# jobs:
-#   test-issue:
-#     runs-on: ubuntu-latest
+jobs:
+  test-issue:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout repo
-#         uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: ${{ env.NODE_VERSION }}
-#           cache: 'npm'
-#           cache-dependancy-path: '${{github.repository}}/ui/glypheditor/package-lock.json'
-#       - run: |
-#           npm ci
-#           npm run build --if-present
-#         #npm run test --if-present
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependancy-path: '${{github.repository}}/ui/glypheditor/package-lock.json'
+      - run: |
+          npm ci
+          npm run build --if-present
+        #npm run test --if-present
