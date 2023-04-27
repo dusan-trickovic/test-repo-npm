@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
           cache-dependency-path: 'ui/glypheditor/package-lock.json'
       - run: |
