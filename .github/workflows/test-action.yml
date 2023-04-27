@@ -15,6 +15,9 @@ jobs:
   test-issue:
     runs-on: ${{ matrix.os }}
 
+    env:
+      NODE_VERSION: 18.x
+
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -24,9 +27,9 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: $NODE_VERSION
           cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
+          cache-dependency-path: 'ui/glypheditor/package-lock.json'
       - run: |
           cd ui/glypheditor
           npm ci
