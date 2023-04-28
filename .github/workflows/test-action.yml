@@ -50,6 +50,3 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.version }}
-          cache: npm
-          cache-dependency-path: 'package-lock.json'
-      - run: echo 'Node successfully installed!'
