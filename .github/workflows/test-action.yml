@@ -42,7 +42,7 @@ jobs:
 
     strategy:
       matrix:
-        version: [19.x, 18, 16, 14]
+        version: [20, 19.x, 18, 16, 14, 12]
     
     steps:
       - name: Checkout Repository
