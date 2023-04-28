@@ -43,7 +43,7 @@ permissions:
 jobs:
   publish:
     name: Publish new NPM package
-    runs-on: [self-hosted, npm-linux]
+    runs-on: [self-hosted, test-npm-runner]
 
     steps:
       - name: Checkout
