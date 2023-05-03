@@ -1,17 +1,17 @@
-name: 'Testing the issue'
+# name: 'Testing the issue'
 
-on: 
-  pull_request:
-    paths-ignore:
-      - '**.md'
+# on: 
+#   pull_request:
+#     paths-ignore:
+#       - '**.md'
   
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
+#   push:
+#     branches:
+#       - main
+#     paths-ignore:
+#       - '**.md'
 
-jobs:
+# jobs:
   # test-issue:
   #   runs-on: ${{ matrix.os }}
 
@@ -37,16 +37,16 @@ jobs:
   #       #npm run test --if-present
 
 
-  different-node-versions:
-    runs-on: ubuntu-latest
+  # different-node-versions:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        version: [20, 19.x, 17, 18, 16, 15, 12]
+  #   strategy:
+  #     matrix:
+  #       version: [20, 19.x, 17, 18, 16, 15, 12]
     
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.version }}
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.version }}
