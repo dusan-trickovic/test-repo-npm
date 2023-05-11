@@ -7,3 +7,8 @@ dependencies-modified:
 index-modified:
   - any: ['**/index.js']
 
+sample-modified:
+  - any: ['**/sample.js']
+
+js-files-modified:
+  - any: ['**/index.js', '**/sample.js']
