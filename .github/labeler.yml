@@ -2,8 +2,8 @@ repo:
   - '*'
 
 dependencies-modified:
-  - any: ['../package.json', '../package-lock.json']
+  - any: ['**/package.json', '**/package-lock.json']
 
 index-modified:
-  - any: ['../index.js']
+  - any: ['**/index.js']
 

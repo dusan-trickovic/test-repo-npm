@@ -11,6 +11,10 @@ jobs:
           pull-requests: write
 
         steps:
+
+            - name: List current directory
+              run: pwd
+
             - name: Add labels
               uses: actions/labeler@v3
               with:
