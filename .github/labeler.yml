@@ -12,3 +12,6 @@ sample-modified:
 
 js-files-modified:
   - any: ['**/index.js', '**/sample.js']
+
+workflows-modified:
+  - any: ['.github/**/*']
