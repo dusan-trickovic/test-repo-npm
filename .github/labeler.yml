@@ -2,7 +2,8 @@ repo:
   - '*'
 
 dependencies-modified:
-  - any: ['package.json', 'package-lock.json']
+  - package.json
+  - package-lock.json
 
 index-modified:
   - any: ['**/index.js']
@@ -15,3 +16,4 @@ js-files-modified:
 
 workflows-modified:
   - any: ['.github/**/*']
+
