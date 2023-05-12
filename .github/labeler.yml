@@ -1,0 +1,19 @@
+repo:
+  - '*'
+
+dependencies-modified:
+  - package.json
+  - package-lock.json
+
+index-modified:
+  - any: ['**/index.js']
+
+sample-modified:
+  - any: ['**/sample.js']
+
+js-files-modified:
+  - '**/*.js'
+
+workflows-modified:
+  - any: ['.github/**/*']
+
