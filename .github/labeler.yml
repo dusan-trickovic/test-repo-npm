@@ -12,7 +12,7 @@ sample-modified:
   - any: ['**/sample.js']
 
 js-files-modified:
-  - */*.js
+  - '**/*.js'
 
 workflows-modified:
   - any: ['.github/**/*']
