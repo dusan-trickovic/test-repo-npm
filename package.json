@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dusan-trickovic/test-repo-npm#readme",
   "dependencies": {
+    "bats": "^1.9.0",
     "jest": "^29.5.0"
   }
 }
