@@ -1,0 +1,23 @@
+name: Labeler
+on: [pull_request]
+
+jobs:
+    label:
+
+        runs-on: ubuntu-latest
+
+        permissions:
+          contents: read
+          pull-requests: write
+
+        steps:
+
+            - name: List current directory
+              run: pwd
+
+            - name: Add labels
+              uses: dusan-trickovic/labeler@test/issue-562-test
+              with:
+                repo-token: "${{ secrets.GITHUB_TOKEN }}"
+                configuration-path: '.github/labeler.yml'
+                sync-labels: true
