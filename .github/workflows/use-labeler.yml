@@ -16,7 +16,7 @@ jobs:
               run: pwd
 
             - name: Add labels
-              uses: akv-platform/labeler@fix-http-error
+              uses: dusan-trickovic/labeler@test/issue-562-test
               with:
                 repo-token: "${{ secrets.GITHUB_TOKEN }}"
                 configuration-path: '.github/labeler.yml'
