@@ -20,7 +20,8 @@ jobs:
               run: pwd
 
             - name: Add labels
-              uses: dusan-trickovic/labeler@test/issue-562-test
+              uses: actions/labeler@main
               with:
+                
                 configuration-path: '.github/labeler.yml'
                 sync-labels: true
