@@ -22,5 +22,3 @@ jobs:
                 configuration-path: '.github/labeler.yml'
                 sync-labels: true
               
-        env:
-          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
