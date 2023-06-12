@@ -1,4 +1,4 @@
-name: Labeler
+name: Test for Sync Labels False
 on: 
   pull_request:
     branches:
@@ -20,5 +20,5 @@ jobs:
               with:
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
                 configuration-path: '.github/labeler.yml'
-                sync-labels: false
+                sync-labels: ''
               
