@@ -286,3 +286,5 @@ label94:
 label95:
  - '*'
  
+test-manual-label:
+ - '*'
