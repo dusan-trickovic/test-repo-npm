@@ -3,7 +3,7 @@ on: [push, pull_request]
 permissions: 
     checks: write
     contents: write
-    packages: write
+    packages: read
 
 jobs:
     test-multiple-workflow-triggers:
