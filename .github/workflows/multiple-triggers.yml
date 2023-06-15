@@ -25,7 +25,7 @@ jobs:
               run: npm ci
               shell: bash
               env:
-                NODE_AUTH_TOKEN: ${{ github.token }}
+                NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
             - name: Run test
               run: npm test
