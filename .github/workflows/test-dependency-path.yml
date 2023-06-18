@@ -22,7 +22,7 @@ jobs:
               with:
                 node-version-file: .nvmrc
                 cache: npm
-                cache-dependency-path: ${{github.repository_owner}}/${{github.repository}}/package.json
+                cache-dependency-path: package.json
                 always-auth: false
                 check-latest: false
             
