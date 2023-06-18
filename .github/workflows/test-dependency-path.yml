@@ -3,10 +3,10 @@ name: Test Caching For Dependencies
 on: 
     push:
         branches:
-            - test/cache-dependency
+            - 'test/cache-dependency'
     pull_request:
         branches:
-            - test/cache-dependency
+            - 'test/cache-dependency'
 
 jobs:
     test-caching:
