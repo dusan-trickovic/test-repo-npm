@@ -1,11 +1,17 @@
 name: Test Caching For Dependencies
 
-on: [push, pull_request]
+on: 
+    push:
+        branches:
+            - 'test/cache-dependency'
+    pull_request:
+        branches:
+            - 'test/cache-dependency'
 
 jobs:
     test-caching:
         name: Test Caching Dependencies
-        runs-on: ubunut-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout
