@@ -20,7 +20,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
-                node-version: .nvmrc
+                node-version: ${{github.repository_owner}}/${{github.repository}}/.nvmrc
                 cache: npm
                 cache-dependency-path: ${{github.repository_owner}}/${{github.repository}}/package.json
                 always-auth: false
