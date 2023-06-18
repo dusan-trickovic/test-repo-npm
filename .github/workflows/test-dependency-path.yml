@@ -1,14 +1,6 @@
 name: Test Caching For Dependencies
 
-on: 
-    push:
-        branches:
-            - 'test/cache-dependency'
-            - 'main'
-    pull_request:
-        branches:
-            - 'test/cache-dependency'
-            - 'main'
+on: [push, pull_request]
 
 jobs:
     test-caching:
