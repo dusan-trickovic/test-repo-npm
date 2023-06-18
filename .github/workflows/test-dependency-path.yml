@@ -4,9 +4,11 @@ on:
     push:
         branches:
             - 'test/cache-dependency'
+            - 'main'
     pull_request:
         branches:
             - 'test/cache-dependency'
+            - 'main'
 
 jobs:
     test-caching:
