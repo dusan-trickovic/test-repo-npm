@@ -22,7 +22,7 @@ jobs:
               with:
                 node-version-file: .nvmrc
                 cache: 'npm'
-                cache-dependency-path: $GITHUB_WORKSPACE/package.json
+                cache-dependency-path: package.json
                 always-auth: false
                 check-latest: false
             
