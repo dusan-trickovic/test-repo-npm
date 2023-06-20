@@ -9,7 +9,7 @@ on:
             - 'test/cache-dependency'
 
 jobs:
-    test-caching:
+    test-caching-tests:
         name: Test Caching Dependencies
         runs-on: ubuntu-latest
 
@@ -31,6 +31,35 @@ jobs:
 
             - name: Run unit tests
               run: npm run test
+
+            - name: The job has succeeded
+              run: |
+               if [[ ${{ job.status }} == 'success' ]]; then
+               echo "All previous steps were successful"
+               else
+               echo "Some previous steps failed"
+               fi
+
+    test-caching-lint:
+        name: Test Caching Dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                node-version-file: .nvmrc
+                cache: 'npm'
+                cache-dependency-path: ./package.json
+            
+            - name: Install Dependencies
+              run: npm i
+
+            - name: Lint
+              run: npm run lint
 
             - name: The job has succeeded
               run: |
