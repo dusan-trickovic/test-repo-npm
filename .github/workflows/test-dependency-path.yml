@@ -23,8 +23,6 @@ jobs:
                 node-version-file: .nvmrc
                 cache: 'npm'
                 cache-dependency-path: ./package.json
-                always-auth: false
-                check-latest: false
             
             - name: Install Dependencies
               run: npm i
@@ -41,7 +39,7 @@ jobs:
                fi
 
     test-caching-lint:
-        name: Test Caching Dependencies
+        name: Run Linting Job
         runs-on: ubuntu-latest
 
         steps:
