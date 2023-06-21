@@ -1,0 +1,24 @@
+# name: Labeler
+# on: 
+#   pull_request:
+#     branches:
+#       - test/new-pull-request
+#       - main
+
+# jobs:
+#     label:
+#         runs-on: ubuntu-latest
+#         permissions:
+#           contents: read
+#           pull-requests: write
+#         steps:
+#             - name: List current directory
+#               run: pwd
+
+#             - name: Add labels
+#               uses: markmssd/labeler@fix/max-100-labels
+#               with:
+#                 repo-token: ${{ secrets.GITHUB_TOKEN }}
+#                 configuration-path: '.github/labeler.yml'
+#                 sync-labels: false
+              
