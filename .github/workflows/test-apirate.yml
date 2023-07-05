@@ -28,3 +28,7 @@ jobs:
           operations-per-run: 2
           debug-only: false
           delete-branch: false
+          days-before-issue-stale: 0
+          days-before-pr-stale: 2
+          stale-pr-message: "Stale PR"
+          stale-issue-message: "Stale issue"
